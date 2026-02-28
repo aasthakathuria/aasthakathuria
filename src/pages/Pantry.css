@@ -1,0 +1,53 @@
+.pantry-empty {
+  text-align: center;
+  padding: 48px 24px;
+  color: var(--color-text-muted);
+}
+
+.pantry-empty .sub {
+  margin-top: 8px;
+  font-size: 0.9rem;
+}
+
+.pantry {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.pantry-category {
+  background: var(--color-card);
+  border-radius: 12px;
+  padding: 12px 14px;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.06);
+}
+
+.pantry-cat-title {
+  font-size: 0.8rem;
+  font-weight: 600;
+  color: var(--color-text-muted);
+  margin-bottom: 10px;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.pantry-list {
+  list-style: none;
+}
+
+.pantry-item {
+  display: flex;
+  justify-content: space-between;
+  padding: 8px 0;
+  border-bottom: 1px solid var(--color-border);
+  font-size: 0.95rem;
+}
+
+.pantry-item:last-child {
+  border-bottom: none;
+}
+
+.pantry-qty {
+  color: var(--color-text-muted);
+  font-size: 0.9rem;
+}

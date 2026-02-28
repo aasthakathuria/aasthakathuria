@@ -1,0 +1,70 @@
+.bottom-nav {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  padding: 0 4px;
+  padding-bottom: calc(8px + var(--safe-area-bottom));
+  z-index: 100;
+}
+
+.nav-bar {
+  display: flex;
+  align-items: stretch;
+  justify-content: space-between;
+  background: var(--color-card);
+  border-radius: 20px;
+  padding: 8px 4px;
+  box-shadow: 0 -2px 12px rgba(0, 0, 0, 0.08);
+  gap: 4px;
+}
+
+.nav-tab {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 8px 4px;
+  min-width: 0;
+  border: none;
+  background: transparent;
+  color: var(--color-text-muted);
+  font-size: 0.65rem;
+  cursor: pointer;
+  transition: color 0.2s, background 0.2s;
+  border-radius: 14px;
+}
+
+.nav-tab:hover {
+  color: var(--color-text);
+}
+
+.nav-tab.active {
+  color: var(--color-primary);
+  background: rgba(45, 90, 39, 0.1);
+}
+
+.nav-tab.nav-camera {
+  background: var(--color-primary);
+  color: white;
+  flex: 1;
+}
+
+.nav-tab.nav-camera:hover {
+  background: var(--color-primary-light);
+  color: white;
+}
+
+.nav-icon {
+  font-size: 1.2rem;
+  margin-bottom: 2px;
+}
+
+.nav-camera .nav-icon {
+  font-size: 1.35rem;
+}
+
+.nav-label {
+  font-weight: 500;
+}
