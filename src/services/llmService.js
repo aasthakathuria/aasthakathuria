@@ -10,9 +10,12 @@ export async function analyzeImageWithLLM(imageBase64) {
     headers: { 'Content-Type': 'application/json' },
     body: JSON.stringify({ imageBase64: base64Only }),
   })
-  const data = await res.json()
+  const data = await res.json().catch(() => ({}))
   if (!res.ok) {
-    throw new Error(data.error || data.details || `Request failed: ${res.status}`)
+    const msg = data.details
+      ? `${data.error || 'Request failed'}: ${data.details}`
+      : (data.error || `Request failed: ${res.status}`)
+    throw new Error(msg)
   }
   return data
 }
